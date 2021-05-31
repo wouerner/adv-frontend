@@ -1,8 +1,8 @@
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Container from '@material-ui/core/Container';
-import Link from 'next/link';
 import Typography from '@material-ui/core/Typography';
+import Link from 'next/link';
 import { DataGrid } from '@material-ui/data-grid';
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -84,16 +84,17 @@ export default function Index ({ data }) {
   return(
       <Container component="main" maxWidth="xs">
           <Typography variant="h3" gutterBottom>
-             Clientes 
+              Usuários 
           </Typography>
-          <Link href={'/client/client'}  prefetch>
-        <Button variant="contained" color="primary">
-          novo 
-        </Button>
+
+          <Link href={'/user/create'}  prefetch>
+              <Button variant="contained" color="primary">
+                  novo 
+              </Button>
           </Link>
-            <div style={{ height: 400, width: '100%' }}>
-                <DataGrid rows={data.results} columns={columns} pageSize={5} checkboxSelection />
-              </div>
+          <div style={{ height: 400, width: '100%' }}>
+              <DataGrid rows={data.results} columns={columns} pageSize={5} checkboxSelection />
+          </div>
       </Container>
   ) 
 

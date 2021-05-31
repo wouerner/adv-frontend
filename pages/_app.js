@@ -50,6 +50,8 @@ export default function MyApp(props) {
                 </Typography>
           <Link href={'/client'}  prefetch>
                 <Button color="inherit">Cliente</Button></Link>
+          <Link href={'/user'}  prefetch>
+                <Button color="inherit">Usuário</Button></Link>
             </Toolbar>
         </AppBar>
 
